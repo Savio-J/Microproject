@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain_community.llms import OpenAI
 
-st.title('GeekCook ???? || Recipe Recommendation System')
+st.title('Find The Recipe You Desire || Recipe Recommendation System')
 
 openai_api_key = st.sidebar.text_input('OpenAI API Key')
 
