@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styletilt.css">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("file:///D:/Project/Images/bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+	<center><h1 class="name" style="font-size: 48px;">What's on your mind?</h1></center>
+<div class="container">
+  <div class="box">
+    <h2 class="name">Food</h2>
+    <a href="http://localhost:8502/" class="buy">Get Crafting</a>
+    <div class="circle"></div>
+    <img class="product" src="https://b.zmtcdn.com/data/dish_images/197987b7ebcd1ee08f8c25ea4e77e20f1634731334.png" width="200" height="200"/>
+  </div>
+  <div class="box">
+    <h2 class="name">Beverages</h2>
+    <a href="http://localhost:8501/" class="buy">Get Crafting</a>
+    <div class="circle"></div>
+    <img class="product" src="D:\Project\Images\drink.png" width="275" height="275" style="margin-left: 11px;"/>
+  </div>
+<script src="https://assets.codepen.io/7773162/vanilla-tilt.min.js"></script>
+<script>
+  VanillaTilt.init(document.querySelectorAll(".box"), {
+		max: 15,
+		speed: 300,
+    easing: "cubic-bezier(.03,.98,.52,.99)",
+    scale: 1.05,
+	});
+</script>
+<script src="main.js"></script>
+</body>
+</html>
