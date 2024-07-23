@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <form id="loginForm">
+            <h1>Login</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" id="password" required>
+                <label for="password">Password</label>
+            </div>
+            <div class="forget">
+                <label for="remember"><input type="checkbox" id="remember">Remember Me</label>
+            </div>
+            <button type="submit">Log in</button>
+            <div class="register">
+                <p>Don't have an account <a href="#">Register</a></p>
+            </div>
+            <p id="errorMessage" style="color: red; display: none;">Invalid email or password. Please try again.</p>
+        </form>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent form submission
+
+            // Get email and password input values
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Define valid email and password
+            var validEmail = "recipecraft@gmail.com";
+            var validPassword = "1234";
+
+            // Check if email and password match the valid credentials
+            if (email === validEmail && password === validPassword) {
+                // Redirect to the dashboard page after successful login
+                window.location.href = "file:///D:/Project/Product%20Card%20Parallax%20Tilt/Tiltcard.html";  // HEEEEEERRRRRRRRRRREEEEEE   Replace "dashboard.html" with your dashboard page URL
+            } else {
+                // Display error message for invalid credentials
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
